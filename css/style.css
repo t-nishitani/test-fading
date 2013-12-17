@@ -1,0 +1,15 @@
+#idMainimg01 {
+    position:relative;
+    text-align:center;
+    z-index:2;
+    margin:0 auto;
+}
+#idMainimg01 div {
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+}
+#idMainimg01 div#rImg1 {
+    display: block;
+}

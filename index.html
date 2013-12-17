@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Fading Test">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fading Test</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+
+        <div id="idMainimg01" class="imgs">
+
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" language="javascript">
+        $(function(){
+            loopanime_start();
+        });
+
+        function loopanime_start(){
+            var timerId;
+            var imgNo = 6;                //画像枚数
+            var currentNo = 0;
+            var targetNo = 0;
+            var fspeeds=5000;            //切り替え時間
+
+            //画像にリンクを指定
+            /*var links = [
+                " http://www.blinderhidden.com/",
+                " http://www.blinderhidden.com/",
+                " http://www.blinderhidden.com/",
+                " http://www.blinderhidden.com/",
+                " http://www.blinderhidden.com/",
+                " http://www.blinderhidden.com/"
+                ];
+            //画像のalt
+            var alts = [
+                "画像クロスフェード切替りを無限ループするJs1",
+                "画像クロスフェード切替りを無限ループするJs2",
+                "画像クロスフェード切替りを無限ループするJs3",
+                "画像クロスフェード切替りを無限ループするJs4",
+                "画像クロスフェード切替りを無限ループするJs5",
+                "画像クロスフェード切替りを無限ループするJs6",
+            ];*/
+
+            (function(){
+                for(var i=1; i<=imgNo; i++){
+                    $('<div id="rImg'+i+'">').appendTo($('#idMainimg01'));
+
+                    var img = $('<img>').attr('src','img/'+i+'.jpg');//画像パスとファイル名指定
+                    //img.attr('alt',alts[i-1]);
+                    img.load(imgLoaded.call(img, i));
+                }
+            })();
+
+            function imgLoaded(no){
+                var obj = $('#rImg'+no);
+                obj.children('img').remove();
+                obj.append($(this));
+                //$('<a href="'+links[no-1]+'" />').append(this).appendTo(obj);
+
+                if(no==1) loop();
+            }
+
+            function loop(){
+                if(currentNo!=0) $('#rImg'+currentNo).fadeOut(fspeeds);
+
+                if(targetNo==0) currentNo = ++currentNo>imgNo?1:currentNo;
+                else currentNo = targetNo;
+                targetNo = 0;
+
+                $('#rImg'+currentNo).fadeIn(fspeeds);
+                timerId = setTimeout(loop, 8000)
+            }
+        }
+        </script>
+    </body>
+</html>
