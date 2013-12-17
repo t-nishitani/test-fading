@@ -1,4 +1,4 @@
-#idMainimg01 {
+#idMainimg01{
     position:relative;
     text-align:center;
     z-index:2;
@@ -10,6 +10,21 @@
     left:0;
     top:0;
 }
-#idMainimg01 div#rImg1 {
+#idMainimg01 div#rImg1{
     display: block;
+}
+
+#viewer {
+    margin: 0 auto;
+    width: 920px;
+    height: 1733px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+#viewer img {
+    top: 0;
+    left: 0;
+    position: absolute;
 }

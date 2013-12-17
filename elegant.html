@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Fading Test">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fading Test</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+
+        <div id="viewer">
+            <img src="img/1.jpg">
+            <img src="img/2.jpg">
+            <img src="img/3.jpg">
+            <img src="img/4.jpg">
+            <img src="img/5.jpg">
+            <img src="img/6.jpg">
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            var fadeSpeed = 5000;
+            var switchDelay = 6000;
+            $(document).ready(function(){
+                $('#viewer img:gt(0)').hide();
+                setInterval(function() {
+                    $('#viewer :first-child').fadeOut(fadeSpeed).next('img').fadeIn(fadeSpeed).end().appendTo('#viewer');
+                }, switchDelay);
+            });
+        </script>
+    </body>
+</html>
