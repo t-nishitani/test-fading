@@ -1,3 +1,7 @@
+body {
+    width: 962px;
+    margin: 0 auto;
+}
 
 #idMainimg01{
     position:relative;
