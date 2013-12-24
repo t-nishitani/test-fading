@@ -2,25 +2,14 @@ body {
     width: 962px;
     margin: 0 auto;
 }
-
-#idMainimg01{
-    position:relative;
-    text-align:center;
-    z-index:2;
-    margin:0 auto;
-}
-#idMainimg01 div {
-    display:none;
-    position:absolute;
-    left:0;
-    top:0;
-}
-#idMainimg01 div#rImg1{
-    display: block;
+header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
 }
 
 #viewer {
-    margin: 0 auto;
+    top: 233px;
     width: 962px;
     height: 1733px;
     text-align: left;
