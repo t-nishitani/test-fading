@@ -8,7 +8,7 @@ header {
     z-index: 9999;
 }
 
-#viewer {
+.elegant {
     top: 233px;
     width: 962px;
     height: 1733px;
@@ -16,7 +16,13 @@ header {
     overflow: hidden;
     position: relative;
 }
-
+.cafespa {
+    width: 784px;
+    height: 927px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
 #viewer img {
     top: 0;
     left: 0;
