@@ -1,5 +1,11 @@
-body {
+body.elegant {
     width: 962px;
+    height: 1733px;
+    margin: 0 auto;
+}
+body.cafespa {
+    width: 784px;
+    height: 927px;
     margin: 0 auto;
 }
 header {
@@ -8,15 +14,15 @@ header {
     z-index: 9999;
 }
 
-.elegant {
-    top: 233px;
+div.elegant {
+    top: 240px;
     width: 962px;
     height: 1733px;
     text-align: left;
     overflow: hidden;
     position: relative;
 }
-.cafespa {
+div.cafespa {
     width: 784px;
     height: 927px;
     text-align: left;
